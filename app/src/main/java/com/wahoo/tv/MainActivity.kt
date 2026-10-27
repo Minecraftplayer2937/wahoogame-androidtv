@@ -28,6 +28,13 @@ class MainActivity : Activity() {
         web.settings.javaScriptEnabled = true
         web.settings.domStorageEnabled = true
         web.settings.mediaPlaybackRequiresUserGesture = false
+        // Ignore the TV's font-size / display-size settings and any page zoom, so the page lays out exactly as designed.
+        web.settings.textZoom = 100
+        web.settings.useWideViewPort = false
+        web.settings.loadWithOverviewMode = false
+        web.settings.setSupportZoom(false)
+        web.settings.builtInZoomControls = false
+        web.setInitialScale(0)
         web.webViewClient = object : WebViewClient() {
             // If the network is down, try again every 4 seconds.
             override fun onReceivedError(view: WebView, request: WebResourceRequest, error: WebResourceError) {
