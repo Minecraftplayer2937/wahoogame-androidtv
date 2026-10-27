@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wahoo</string>
+    <!-- Your TV page. No ?room= means it makes a fresh room code each launch. -->
+    <string name="tv_url">https://wahoogame302.web.app/tv</string>
+</resources>
